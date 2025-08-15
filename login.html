@@ -71,8 +71,6 @@
 </head>
 <body>
     <form id="loginForm">
-        <div class="blood-logo">❤️</div>
-        <div class="title">Blood Donation Management System</div> 
         <h2>Login</h2>
 
         <label for="phone">Phone Number:</label>
@@ -84,15 +82,8 @@
         <button type="submit">Login</button>
 
         <div class="register-link">
-            New user? <a href="index.html">Register here</a>
+            New user? <a href="login.html">Register here</a>
         </div>
-        <div class="blood-drop">💉</div>
-    </div>
-
-    <!-- Admin Login Button -->
-    <button class="admin-login-btn" onclick="window.location.href='admin-login.html'">Admin Login</button>
-  </div>
-  
     </form>
 
     <script type="module">
@@ -100,13 +91,13 @@
         import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
 
         const firebaseConfig = {
-  apiKey: "AIzaSyCH81xSjRDP6WFNjcjj77j68rEz1erf1Fw",
-  authDomain: "blooddonationsystem-bf877.firebaseapp.com",
-  projectId: "blooddonationsystem-bf877",
-  storageBucket: "blooddonationsystem-bf877.firebasestorage.app",
-  messagingSenderId: "297033049797",
-  appId: "1:297033049797:web:89a2aaf80cc4cd908f72ac"
-};
+          apiKey: "AIzaSyCH81xSjRDP6WFNjcjj77j68rEz1erf1Fw",
+          authDomain: "blooddonationsystem-bf877.firebaseapp.com",
+          projectId: "blooddonationsystem-bf877",
+          storageBucket: "blooddonationsystem-bf877.appspot.com",
+          messagingSenderId: "297033049797",
+          appId: "1:297033049797:web:89a2aaf80cc4cd908f72ac"
+        };
 
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
@@ -129,7 +120,7 @@
 
             if (found) {
                 alert("Login successful!");
-                window.location.href = "dashboard.html"; // Redirect to dashboard after successful login
+                window.location.href = "dashboard.html";
             } else {
                 alert("Invalid phone or password.");
             }
@@ -137,4 +128,5 @@
     </script>
 </body>
 </html>
+
 
